@@ -312,7 +312,7 @@ def main(args):
         if args.model_output_path:     # Check if the user specified a target save location
             SAVE_LOCATION=args.model_output_path
         
-        torch.save(trained_policy.parameters(), f=SAVE_LOCATION)
+        torch.save(trained_policy.state_dict(), f=SAVE_LOCATION)
         print(f"Model weights saved in: {SAVE_LOCATION}")
 
     print("Exiting Script")
@@ -349,7 +349,7 @@ if __name__ == '__main__':
                         help='Explicitly set device (e.g., "cpu, cuda:0", "cpu"). Overrides --use_cuda if specified.')
     parser.add_argument('--save_model', action='store_true',
                         help='Save the trained model weights using this flag.')
-    parser.add_argument('--model_output_path', type=str, default='blackjack_policy_model.pth',
+    parser.add_argument('--model_output_path', type=str, default='./app/model_weights/blackjack_policy_model.pth',
                         help='Path to save the trained model weights.')
 
     # Parse the arguments

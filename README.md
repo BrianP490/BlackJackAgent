@@ -54,3 +54,11 @@ Once your Conda environment is active, you can launch the Streamlit application.
 \
 \
 You can also launch this with the streamlit online app deployment on https://streamlit.io/, just make sure to follow the steps to create a new repository with this clone and make sure that "requirements.txt" is at the root directory.
+\
+\
+\
+You can also run the training script "./app/scripts/train.py":
+   ```bash
+   # use the -h option for running options:
+   python ./app/scripts/train.py -h
+   ```
