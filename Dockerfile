@@ -14,6 +14,10 @@ RUN apt-get update && apt-get install -y \
 
 # Copy your requirements.txt file into the container and install dependencies.
 COPY requirements.txt .
+
+# Update pip and setuptools before installing other dependencies to prevent errors
+RUN pip install --upgrade pip setuptools
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy your entire application code, including the model weights, into the container.

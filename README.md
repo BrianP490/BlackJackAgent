@@ -34,7 +34,15 @@ This project is a Streamlit-based Blackjack Agent that uses PyTorch to load a tr
    \
    If running ipynb file on VS code: Select install ikernel when popup appears when first activating the env, select the GRPO_env for the kernel, and run the cells.
 
-2. **Run the Streamlit Application**:
+3. **(OPTIONAL) Train a New Model**:
+   You can also run the training script "./app/scripts/train.py":
+      ```bash
+      # Use the -h option for running options:
+      python ./app/scripts/train.py -h
+      ```
+   You will have to change line 10's variable "weights_file" in "./app/main.py" to use the correct path to your trained model weights. This is if you chose to save you model in another location besides the default path "./app/model_weights/blackjack_policy_model.pth"
+
+4. **Run the Streamlit Application**:
 Once your Conda environment is active, you can launch the Streamlit application.
 
    - Navigate to the correct directory (if not already there): Make sure your current working directory in the terminal is BlackJack-Agent/ (the root of the project where app/ resides).
@@ -50,15 +58,5 @@ Once your Conda environment is active, you can launch the Streamlit application.
 
    Enjoy!
 
-\
-\
-\
+## Launching Using Streamlit.io
 You can also launch this with the streamlit online app deployment on https://streamlit.io/, just make sure to follow the steps to create a new repository with this clone and make sure that "requirements.txt" is at the root directory.
-\
-\
-\
-You can also run the training script "./app/scripts/train.py":
-   ```bash
-   # use the -h option for running options:
-   python ./app/scripts/train.py -h
-   ```

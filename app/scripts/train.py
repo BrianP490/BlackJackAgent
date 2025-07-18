@@ -9,7 +9,7 @@
 # %% [markdown]
 # **Results**
 # 
-# * Still very slow during training
+# * Still very slow during GPU training
 
 # %% [markdown]
 # # Imports
@@ -318,7 +318,6 @@ def main(args):
     print("Exiting Script")
 
 # %%
-# Example usage (assuming you have a way to call this function, e.g., in a main block)
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Train and test a BlackJack PPO agent.")
 
@@ -355,5 +354,5 @@ if __name__ == '__main__':
     # Parse the arguments
     args = parser.parse_args()
 
-    
+    # Call main function with the arguments
     main(args)
